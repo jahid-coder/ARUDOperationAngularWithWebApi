@@ -1,0 +1,12 @@
+IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID('User'))
+BEGIN
+	CREATE TABLE [dbo].[User](
+		Id INT IDENTITY(1,1) NOT NULL,
+		FullName VARCHAR(256) NULL,
+		UserName VARCHAR(256) NULL,
+		[Password] VARCHAR(256) NULL,
+		Mobile VARCHAR(256) NULL,
+		UserType VARCHAR(256) NULL,
+	)
+END
+GO
